@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Details form  </title>
+</head>
+<style type="text/css">
+	#employee{
+		background-color: yellow;}
+	#password{
+		background-color: pink;
+	}
+	#button{
+		background-color: green;
+	}
+	#reset{
+		background-color: green;
+	}
+</style>
+<body>
+<form name="Student Form" method="post">
+<fieldset>
+	<legend>Insert Data Form</legend>
+Employee ID:<input id = "employee" type="text" name="fnm"><br>
+First name:<input type="text" name="fnm"><br>
+Last name:<input type="text" name="unm"><br>
+Password:<input id = "password" type="password" name="pwd"><br>
+<br><br>
+Gender:
+<input type="radio" name="gn1">Male
+<input type="radio" name="gn1">Female
+<br><br>
+Languages Known:-
+<input type="checkbox" name="ch1">Hindi
+<input type="checkbox" name="ch2">Marathi
+<input type="checkbox" name="ch3">English
+<br><br>
+Country:
+<select>
+	<option>India</option>
+	<option>usa</option>
+</select>
+<br><br>
+City:
+<input list="Cities">
+<datalist id="Cities">
+	<option value="Pune"></option>
+	<option value="Mumbai"></option>
+	<option value="latur"></option>
+</datalist>
+<br><br>
+Address:<textarea cols="60" rows="1"></textarea>
+<br><br>
+<input id = "button" type="submit" name="sub" value="submit">
+<button id = "reset">reset</button>
+</fieldset>	
+
+</form>
+</body>
+</html>
