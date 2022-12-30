@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+  
+  <hibernate-mapping>  
+  <class name="Component_Mapping.Employee" table="employeeaddress">  
+    <id name="empid">  
+     <generator class="increment"></generator>  
+    </id>          
+    <property name="empname"></property>  
+    <property name="salary"></property>
+     
+    <component name="addr" class="Component_Mapping.Address">
+    
+    <property name="city"></property>
+    <property name="country"></property>
+    <property name="state"></property>
+ 
+    </component>
+               
+  </class>  
+            
+ </hibernate-mapping> 
