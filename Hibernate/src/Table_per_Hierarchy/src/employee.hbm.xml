@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">  
+<!--
+for Table-per-Hierarchy- <subclass> tag is used. 
+for Table-per-Concreate-Class- <union-subclass> tag is used. 
+for Table-per-Subclass- <joined-subclass> tag is used. 
+ -->
+  <hibernate-mapping>  
+  <class name="mypack.Employee" table="emp121" discriminator-value="emp">
+    
+    <id name="id"> 
+     <generator class="increment"></generator>  
+    </id>  
+    
+<!-- <discriminator column="type" type="string"></discriminator>  -->    
+            
+    <property name="name"></property>  
+    
+    
+    <!-- This is all for second class -->
+    <joined-subclass name="mypack.Regular_Employee" table="regemp123">
+    <key column="eid"></key>
+    <property name="salary"></property>
+    <property name="bonus"></property>  
+    </joined-subclass>
+    
+    <!-- this is all for third class i.e Contract_Employee -->
+    <joined-subclass name="mypack.Contract_Employee" table="contemp123">
+	<key column="eid"></key>
+    <property name="pay_per_hour"></property>
+    <property name="contract_period"></property>
+    </joined-subclass>
+               
+  </class>  
+            
+ </hibernate-mapping> 
