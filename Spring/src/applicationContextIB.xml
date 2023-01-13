@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="p1" class="ConstructorInjection_InheritingBean.Person">
+<constructor-arg value="Mayur"></constructor-arg>
+<constructor-arg value="pune"></constructor-arg>
+</bean>  
+
+<bean id="e1" class="ConstructorInjection_InheritingBean.Employee" parent="p1">
+<constructor-arg value="101"></constructor-arg>
+<constructor-arg value="78546"></constructor-arg>
+<constructor-arg value="TCS"></constructor-arg>
+</bean>
+</beans>
+   
