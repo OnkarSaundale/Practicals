@@ -1,0 +1,10 @@
+Data Access Object patterns, often known as DAO patterns, 
+are used to divide high level business services from low level data accessing APIs or actions.
+The members of the Data Access Object Pattern are listed below.
+
+Data Access Object Interface: The Data Access Object Interface specifies the common operations to be carried out on a model object (s).
+
+Concrete Data Access Object class: This class implements the aforementioned interface.
+This class is in charge of obtaining data from a data source, which could be a database, XML, or another type of storage system.
+
+Model or Value Object: This object is a straightforward POJO with get/set methods for storing data obtained using the DAO class.
